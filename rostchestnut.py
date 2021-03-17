@@ -47,6 +47,10 @@ async def on_ready():
 
         await asyncio.sleep(20)
 
+@app.command
+async def ping(ctx):
+    await ctx.channel.send("pong!")
+
     # while True:
     #     headers = {'clinet-ID': 'z3h5altd9xaau4gmighodebwjjliwd', 'Authorization': authorization}
     #     response = requests.get(" https://api.twitch.tv/helix/streams?user_login=" + Twitch, headers=headers)
