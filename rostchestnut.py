@@ -3,6 +3,7 @@ import discord
 import requests
 import asyncio
 from json import loads
+import os
 
 from discord.ext import commands
 
@@ -58,4 +59,4 @@ async def on_ready():
     #         a = 0
     #     await asyncio.sleep(1)
 
-app.run("ODIxMjkzMTMxNzg5MTA3MjQw.YFBm1Q.BvQtoFck9qeMWf3k4mpGxdKU44I")
+app.run(os.environ['token'])
