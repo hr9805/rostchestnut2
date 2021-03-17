@@ -49,7 +49,7 @@ async def on_ready():
 
 @app.command
 async def ping(ctx):
-    await ctx.channel.send("pong!")
+    await ctx.send("pong!")
 
     # while True:
     #     headers = {'clinet-ID': 'z3h5altd9xaau4gmighodebwjjliwd', 'Authorization': authorization}
