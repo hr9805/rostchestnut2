@@ -46,7 +46,7 @@ async def on_ready():
         embed.set_author(name=nickname, icon_url=icon)
         embed.add_field(name="게임", value=game_name, inline=True)
         embed.add_field(name="방송 보러가기", value='https://www.twitch.tv/' + Twitch, inline=True)
-        embed.set_footer(text='방송 시작•' + print_time)
+        embed.set_footer(text='방송 시작 • ' + print_time)
         embed.set_thumbnail(url=icon)
         # 라이브 상태 체크
         try:
