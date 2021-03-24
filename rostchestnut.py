@@ -34,12 +34,13 @@ async def on_ready():
         # 트위치 api에게 방송 정보 요청
         headers = {'client-id': twitch_Client_ID, 'Authorization': authorization}
         response_channel = requests.get('https://api.twitch.tv/helix/streams?user_login=' + Twitch, headers=headers)
+        # response_game = requests.get('GET https://api.twitch.tv/helix/games' + Twitch, headers=headers) # https://dev.twitch.tv/docs/api/reference#get-games
         print(response_channel.text)
         # 라이브 상태 체크
         try:
             # 방송 정보에서 'data'에서 'type' 값이 live 이고 체크상태가 false 이면 방송 알림(오프라인이면 방송정보가 공백으로 옴)
             if loads(response_channel.text)['data'][0]['type'] == 'live' and check == False:
-                await channel.send("@everyone" + name + " 님이 방송을 시작했다구! 어서들 보러 오라구!")
+                await channel.send("@everyone" + name + " 님이 방송을 시작했다구! 어서들 보러 오라구! https://www.twitch.tv/" + name)
                 print("Online")
                 check = True
         except:
