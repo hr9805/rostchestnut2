@@ -3,6 +3,8 @@ import discord
 import requests
 import asyncio
 from json import loads
+from datetime import datetime
+import pytz
 import os
 
 from discord.ext import commands
@@ -40,13 +42,13 @@ async def on_ready():
         icon = 'https://static-cdn.jtvnw.net/jtv_user_pictures/7d7a3d97-fe35-4622-ae51-da358992947f-profile_image' \
                '-300x300.jpeg '
         stream_start = loads(response_channel.text)['data'][0]['started_at']
-        print_time = stream_start[0:4] + '년' + stream_start[5:7] + '월' + stream_start[8:10] + '일 ' + stream_start[11:19]
+        # print_time = stream_start[0:4] + '년' + stream_start[5:7] + '월' + stream_start[8:10] + '일 ' + stream_start[11:19]
         # embed
-        embed = discord.Embed(title=title, color=0x62c1cc)
+        embed = discord.Embed(title=title, timestamp=datetime.now((pytz.timezone('UTC'))), color=0x62c1cc)
         embed.set_author(name=nickname, icon_url=icon)
         embed.add_field(name="게임", value=game_name, inline=True)
         embed.add_field(name="방송 보러가기", value='https://www.twitch.tv/' + Twitch, inline=True)
-        embed.set_footer(text='방송 시작 • ' + print_time)
+        # embed.set_footer(text='방송 시작 • ' + print_time)
         embed.set_thumbnail(url=icon)
         # 라이브 상태 체크
         try:
