@@ -50,6 +50,7 @@ async def on_ready():
         embed.add_field(name="방송 보러가기", value='https://www.twitch.tv/' + Twitch, inline=True)
         # embed.set_footer(text='방송 시작 • ' + print_time)
         embed.set_thumbnail(url=icon)
+        
         # 라이브 상태 체크
         try:
             # 방송 정보에서 'data'에서 'type' 값이 live 이고 체크상태가 false 이면 방송 알림(오프라인이면 방송정보가 공백으로 옴)
