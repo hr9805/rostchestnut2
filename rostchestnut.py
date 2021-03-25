@@ -21,7 +21,7 @@ async def on_ready():
     name = 'rnsqkathsus'
     twitch_Client_ID = 'z3h5altd9xaau4gmighodebwjjliwd'
     twitch_Client_secret = 'ofisiq4twzfmr2hxh6q4r6z7blw21q'
-    channel = app.get_channel(820622842621853729)
+    channel = app.get_channel(821011605496135770)
     oauth_key = requests.post("https://id.twitch.tv/oauth2/token?client_id=" + twitch_Client_ID + "&client_secret=" + twitch_Client_secret + "&grant_type=client_credentials")
     access_token = loads(oauth_key.text)["access_token"]
     token_type = 'Bearer '
@@ -54,7 +54,6 @@ async def on_ready():
 
         # 라이브 상태 체크
         try:
-            #if True:
             # 방송 정보에서 'data'에서 'type' 값이 live 이고 체크상태가 false 이면 방송 알림(오프라인이면 방송정보가 공백으로 옴)
             if loads(response_channel.text)['data'][0]['type'] == 'live' and check == False:
                 # await channel.send(embed=embed)
