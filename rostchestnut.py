@@ -17,7 +17,7 @@ async def on_ready():
     game = discord.Game("알밤소년봇 고치는중...")
     await app.change_presence(status=discord.Status.dnd, activity=game)
 
-    Twitch = 'lol_ambition'
+    Twitch = 'gu05179'
     # name = 'rnsqkathsus'
     twitch_Client_ID = 'z3h5altd9xaau4gmighodebwjjliwd'
     twitch_Client_secret = 'ofisiq4twzfmr2hxh6q4r6z7blw21q'
