@@ -14,14 +14,15 @@ app = commands.Bot(command_prefix='!')
 async def on_ready():
     print(app.user.id)
     print("전 준비됐답니다~~")
-    game = discord.Game("알밤소년봇 테스트중")
+    game = discord.Game("알밤소년봇 고치는중...")
     await app.change_presence(status=discord.Status.dnd, activity=game)
 
-    Twitch = 'gu05179'
-    name = 'rnsqkathsus'
+    Twitch = 'lol_ambition'
+    # name = 'rnsqkathsus'
     twitch_Client_ID = 'z3h5altd9xaau4gmighodebwjjliwd'
     twitch_Client_secret = 'ofisiq4twzfmr2hxh6q4r6z7blw21q'
-    channel = app.get_channel(821011605496135770)
+    # channel = app.get_channel(821011605496135770)
+    channel = app.get_channel(820622842621853729)
     oauth_key = requests.post("https://id.twitch.tv/oauth2/token?client_id=" + twitch_Client_ID + "&client_secret=" + twitch_Client_secret + "&grant_type=client_credentials")
     access_token = loads(oauth_key.text)["access_token"]
     token_type = 'Bearer '
