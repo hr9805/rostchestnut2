@@ -14,7 +14,7 @@ app = commands.Bot(command_prefix='!')
 async def on_ready():
     print(app.user.id)
     print("전 준비됐답니다~~")
-    game = discord.Game("알밤소년봇 고치는중...")
+    game = discord.Game("나의 키는 185m")
     await app.change_presence(status=discord.Status.dnd, activity=game)
 
     Twitch = 'gu05179'
