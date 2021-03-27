@@ -68,6 +68,8 @@ async def on_ready():
 
         await asyncio.sleep(20)
 
+app.run(os.environ['token'])
+
 # @app.event
 # async def on_ready():
 #     print(app.user.id)
@@ -117,5 +119,3 @@ async def on_ready():
 #             check = False
 
 #         await asyncio.sleep(20)
-
-app.run(os.environ['token'])
